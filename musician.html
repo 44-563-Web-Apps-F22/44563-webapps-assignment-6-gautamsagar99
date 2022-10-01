@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
- <title>Musician Page</title>
+    <head>
+        <title>Musician Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+ 
+
 <body>
 
 <h2>Musician guess by Gautam Sagar Mallela</h2>
@@ -18,9 +24,17 @@
 
 <p id="result"></p>
 
+
+<div class="container">
+    <img id="image" src="mosquito.jpg" alt="mosquito" width="100" height="100" onclick="swapImage()">
+</div>
+
 <script> 
 let correct = 0
 let wrong = 0
+
+let useImage = 1
+
 function checkGuess(){
     console.log("Getting form values")
     name = document.getElementById("form1_name").value
@@ -38,6 +52,27 @@ function checkGuess(){
         out.innerHTML = "correct: " + correct + " wrong: " + wrong
 }
 }
+
+function swapImage(){
+    switch(useImage){
+        case 1:
+            document.getElementById('image').src = 'leafInsect.jpg'
+            useImage = 2
+            break;
+        case 2:
+            document.getElementById('image').src = 'ant.jpg'
+            useImage = 3
+            break;
+        case 3: 
+            document.getElementById('image').src = 'mosquito.jpg'
+            useImage = 1
+            break;
+        default:
+            console.log('Logic got wrong')
+    }
+}
+
+
 </script>
 </body>
 </html> 
