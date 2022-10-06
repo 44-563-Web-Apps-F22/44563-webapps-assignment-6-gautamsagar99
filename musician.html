@@ -12,13 +12,23 @@
 <h2>Musician guess by Gautam Sagar Mallela</h2>
 
 <form>
-    <label for="form1_name">Enter the secret musician name </label>
+    <div class="form-group row">
+        <div class="input-group mb-3">
+    <label for="form1_name" class="col-sm-2 col-form-label">Enter the secret musician name </label>
+    <div class="col-sm-4">
     <input type ="password" id="form1_name" name="form1_name" value="John Lennon"> <br>
+    </div>
+    </div>
 
-    <label for="form1_guessName">Guess the musician </label>
+    <div class="input-group mb-3">
+    <label for="form1_guessName" class="col-sm-2 col-form-label">Guess the musician </label>
+    <div class="col-sm-4">
     <input type ="text" id="form1_guessName" name="form1_guessName" autofocus> <br>
+    </div>
+    </div>
 
-    <input type="button" onclick="checkGuess()" value="Check the guess">
+    <input type="button" class="btn btn-primary" onclick="checkGuess()" value="Check the guess">
+</div>
 </form>
 
 

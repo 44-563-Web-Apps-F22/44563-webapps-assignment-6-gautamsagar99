@@ -10,35 +10,70 @@
 <h2>Gautam Sagar Mallela - selects a vacation</h2>
 
 <form>
+    <div class="form-group ">
+    <div class="input-group mb-3 col-sm-4">
+    <div class="input-group-prepend">
+    <div class="input-group-text">
     <input type="checkbox" id="cb1_air" name="air"  
       value="air" checked>
-    <label for="cb1_air">Travel by Air</label></br>
-  
+      </div>
+      </div>
+
+    <label for="cb1_air"  class="form-control form-control-sm">Travel by Air</label></br>
+    </div>
+
+
+
+    <div class="input-group mb-3 col-sm-4">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
     <input type="checkbox" id="cb1_domestic" name="domestic" 
        value="domestic">
-    <label for="cb1_domestic">Domestic</label></br>
-  
+       </div>
+       </div>
+    <label for="cb1_domestic" class="form-control form-control-sm">Domestic</label></br>
+  </div>
+
+
+
+  <div class="input-group mb-3 col-sm-4">
+    <div class="input-group-prepend">
+        <div class="input-group-text ">
     <input type="checkbox" id="cb1_resort" name="resort"   
        value="resort" checked >
-    <label for="cb1_resort">Resort</label></br>
-
-    <input type="button" onclick="selectVacation()" value="Select a vacation">
+       </div>
+       </div>
+    <label for="cb1_resort" class="form-control form-control-sm">Resort</label></br>
+    </div>
+    
+    <input type="button" class="btn btn-primary" onclick="selectVacation()" value="Select a vacation">
+</div>
 </form>
 <p id="checkbox1_para"></p>
 
 
 <form>
-    <label for="form1_city">Enter a city </label>
-    <input type ="text" id="form1_city" name="form1_city"  value="city"> <br>
 
-    <label for="form1_price">Enter price </label>
-    <input type ="text" id="form1_price" name="form1_price" autofocus> <br>
+    <div class="form-group row">
+        <div class="input-group mb-3">
+    <label for="form1_city" class="col-sm-2 col-form-label">Enter a city </label>
+    <div class="col-sm-4">
+    <input type ="text" class="form-control" id="form1_city" name="form1_city"  value="city"> <br>
+    </div>
+    </div>  
 
-    <input type="button" onclick="updateVacation()" value="Update the vacation">
+    <div class="input-group mb-3">
+    <label for="form1_price" class="col-sm-2 col-form-label">Enter price </label>
+    <div class="col-sm-4">
+    <input type ="text" class="form-control" id="form1_price" name="form1_price" autofocus> <br>
+    </div>  
+</div>
+    <input type="button"  class="btn btn-primary col-sm-2" onclick="updateVacation()" value="Update the vacation">
+
 </form>
 
 
-<p id="result">This text will be replaced </p>
+<p id="result"> </p>
 
 <script> 
 my_vacation = {}
