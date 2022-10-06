@@ -32,6 +32,7 @@
 <script> 
 let correct = 0
 let wrong = 0
+let count = 0
 
 let useImage = 1
 
@@ -45,13 +46,24 @@ function checkGuess(){
         alert("You got it right")
         correct += 1
         out.innerHTML = "correct: " + correct + " wrong: " + wrong
+        count = 0
     }
     else{
         alert("Wrong Musician")
         wrong += 1
         out.innerHTML = "correct: " + correct + " wrong: " + wrong
+        count += 1
+        if(count >= 3){
+            gameOver()
+        }
+    }
 }
+
+
+function gameOver(){
+    alert('Sorry, game over.')
 }
+
 
 function swapImage(){
     switch(useImage){
