@@ -18,14 +18,20 @@
 
     <input type="button" onclick="discount()" value="Apply discount">
 </form>
-
-
 <p id="result"> </p>
-
+<form>
+    <input type="radio" id="times" name="oper" value="times" onclick="chooseOp()">
+    <label for="times">*</label></br>
+    <input type="radio" id="divide" name="oper" 
+       value="divide" onclick="chooseOp()">
+    <label for="divide">/</label></br>
+    <input type="radio" id="exponent" name="oper"   
+       value="exponent" onclick="chooseOp()">
+    <label for="exponent">**</label></br>
+</form>
+<p id="form_para"></p>
 <script> 
-
 function discount(){
-    
     amountValue = document.getElementById("amount").value
     discountValue = document.getElementById("disc").value
     result = ""
@@ -37,12 +43,22 @@ function discount(){
         count+=1
         amount = amountValue * (count)
     }
-
     out = document.getElementById("result")
     out.innerHTML = "Discounted amounts for base "+ amountValue  +" are "+ result;    
 }
-
-
+function chooseOp(){
+    amountValue = document.getElementById("amount").value
+    discountValue = document.getElementById("disc").value    
+    if(document.getElementById('times').checked) {
+        result1 = amountValue * discountValue
+    }
+    else if(document.getElementById('divide').checked){
+        result1 = amountValue / discountValue
+    }else{
+        result1 = amountValue ** discountValue
+    }
+    document.getElementById('form_para').innerHTML = result1
+}
 </script>
 
 </body>
